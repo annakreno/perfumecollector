@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% for perfume in perfumes %}
+<a href="{% url 'detail' perfume.id %}">
+    <div class="card">
+        <div class="card-content">
+            <span class="card-title"> {{ perfume.name }} </span>
+            <p>Brand: {{ perfume.brand }} </p>
+            <p>Notes: {{ perfume.notes }} </p>
+            <!-- <ul>Notes:
+                {% for note in perfume.notes %}
+                    <li>{{note}}</li>
+                {% endfor %}
+            </ul> -->
+            <p>Description: {{ perfume.description }} </p>
+        </div>
+    </div>
+</a>
+
+{% endfor %}
+
+{% endblock %}
+
+ 

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Fragrance Details:</h1>
+
+<div class="card">
+    <div class="card-content">
+      <span class="card-title">{{ perfume.name }}</span>
+      <p>Brand: {{ perfume.brand }}</p>
+      <p>Notes: {{ perfume.notes }}</p>
+        <!-- {% for note in perfume.notes %}
+        <li>{{ note }}</li>
+        {% endfor %} -->
+      <p>Description: {{ perfume.description|linebreaks }}</p>
+    </div>
+</div>
+
+{% endblock %}
