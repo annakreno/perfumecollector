@@ -13,6 +13,10 @@
         {% endfor %} -->
       <p>Description: {{ perfume.description|linebreaks }}</p>
     </div>
+    <div class="card-action">
+        <a href="{% url 'perfumes_update' perfume.id %}">Edit</a>
+        <a href="{% url 'perfumes_delete' perfume.id %}">Delete</a>
+    </div>    
 </div>
 
 {% endblock %}
