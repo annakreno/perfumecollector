@@ -9,4 +9,5 @@ urlpatterns = [
     path('perfumes/create/', views.PerfumeCreate.as_view(), name='perfumes_create'),
     path('perfumes/<int:pk>/update/', views.PerfumeUpdate.as_view(), name='perfumes_update'),
     path('perfumes/<int:pk>/delete/', views.PerfumeDelete.as_view(), name='perfumes_delete'),
+    path('perfume/<int:perfume_id>/add_review/', views.add_review, name='add_review'),
 ]
